@@ -6,7 +6,7 @@
 /*   By: fgiulian <fgiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:32:23 by fgiulian          #+#    #+#             */
-/*   Updated: 2022/11/11 19:32:25 by fgiulian         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:34:42 by fgiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ private:
 	std::string phone_number;
 	std::string darkest_secret;
 public:
+	Contact(){};
+	~Contact(){};
 	std::string get_first_name();
 	void set_first_name(std::string first_name);
 	std::string get_last_name();
@@ -36,13 +38,5 @@ public:
 	std::string get_darkest_secret();
 	void set_darkest_secret(std::string darkest_secret);
 };
-
-std::string Contact::get_first_name() {
-	return this->first_name;
-}
-
-void Contact::set_first_name(std::string first_name) {
-	this->first_name = first_name;
-}
 
 #endif

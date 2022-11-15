@@ -6,7 +6,7 @@
 /*   By: fgiulian <fgiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:32:30 by fgiulian          #+#    #+#             */
-/*   Updated: 2022/11/11 19:44:00 by fgiulian         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:48:05 by fgiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void Contact::set_phone_number(std::string phone_number) {
 }
 
 std::string Contact:: get_darkest_secret() {
-	return phone_number;
+	return darkest_secret;
 }
 
 void Contact::set_darkest_secret(std::string darkest_secret) {

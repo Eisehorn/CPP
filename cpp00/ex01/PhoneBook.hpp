@@ -6,7 +6,7 @@
 /*   By: fgiulian <fgiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:32:18 by fgiulian          #+#    #+#             */
-/*   Updated: 2022/11/11 19:32:21 by fgiulian         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:30:52 by fgiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,18 @@
 
 # include <iostream>
 # include <string>
+# include "Contact.hpp"
 
 class PhoneBook
 {
 private:
-	std::
+	Contact _contact[8];
 public:
-	PhoneBook(/* args */);
+	PhoneBook();
 	~PhoneBook();
+	void phonebook_add(int i);
+	void phonebook_display();
+	void phonebook_search(int i);
 };
 
 #endif
