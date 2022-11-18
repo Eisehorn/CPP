@@ -1,5 +1,5 @@
-NAME = BraiiiiiiinnnzzzZ
-SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+NAME = Moar_brainz!
+SRCS = Zombie.cpp zombeHorde.cpp main.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
