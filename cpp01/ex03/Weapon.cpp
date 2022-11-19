@@ -8,3 +8,7 @@ std::string &Weapon::getType() {
 void Weapon::setType(std::string new_type) {
     this->_type = new_type;
 }
+
+Weapon::Weapon(std::string name) {
+    this->_type = name;
+}
