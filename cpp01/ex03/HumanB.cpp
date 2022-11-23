@@ -7,9 +7,12 @@ HumanB::HumanB(std::string name) {
 HumanB::~HumanB() {};
 
 void    HumanB::attack() {
-    std::cout<<this->_name<<" attack with their "<<this->_Weapon<<std::endl;
+    if (this->_Weapon)
+        std::cout<<this->_name<<" attack with their "<<this->_Weapon->getType()<<std::endl;
+    else
+        std::cout<<this->_name<<" can't attack"<<std::endl;
 }
 
-void    HumanB::setWeapon(Weapon weapon) {
-    this->_Weapon = weapon.getType();
+void    HumanB::setWeapon(const Weapon &weapon) {
+    this->_Weapon = &weapon;
 }

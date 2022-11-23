@@ -3,10 +3,10 @@
 class HumanB {
     private:
         std::string _name;
-        std::string _Weapon;
+        const Weapon *_Weapon;
     public:
         HumanB(std::string name);
         ~HumanB();
         void    attack();
-        void    setWeapon(Weapon weapon);
+        void    setWeapon(const Weapon &weapon);
 };
