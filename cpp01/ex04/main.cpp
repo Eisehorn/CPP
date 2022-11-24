@@ -11,6 +11,7 @@ int main(int argc, char **argv) {
 	}
 	const char *filename = argv[1];
 	std::string comp;
+	std::string cpy;
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	char *dest = (char *)malloc(strlen(filename));
@@ -25,20 +26,28 @@ int main(int argc, char **argv) {
 	fs_1.open(temp, std::fstream::out | std::fstream::trunc);
 	while (!fs.eof() && fs.is_open()) {
 		comp[0] = fs.get();
-		std::cout<<comp[0];
+		std::cout<<comp[0]<<std::endl;
 		if (comp[0] == s1[0]) {
-			for (i = 0; i < (int)s1.length(); i++) {
-				comp[i] = fs.get();
-				std::cout<<comp<<"--"<<s1<<std::endl;
-				if (comp[i] != s1[i]) {
-					fs_1 << comp;
-					for(int j = i; j > 0; j--)
-						comp[j] = '\0';
+			for (i = 0; i < (int)s1.length() - 1; i++) {
+				if (i == 0)
+					cpy = cpy + comp[0];
+				comp[0] = fs.get();
+				if (fs.eof()) {
+					fs_1 << cpy;
+					cpy.clear();
 					break;
 				}
-			}
-			if (i == (int)s1.length()) {
-				fs_1 << s2;
+				cpy = cpy + comp[0];
+				std::cout<<comp[0]<<"--"<<s1[i + 1]<<"---"<<cpy<<std::endl;
+				if (comp[0] != s1[i + 1]) {
+					fs_1 << cpy;
+					cpy.clear();
+					break;
+				}
+				if (i == (int)s1.length() - 2) {
+					fs_1 << s2;
+					cpy.clear();
+				}
 			}
 		}
 		else
