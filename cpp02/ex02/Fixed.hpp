@@ -21,6 +21,14 @@ class Fixed {
         Fixed operator-(Fixed const &f);
         Fixed operator*(Fixed const &f);
         Fixed operator/(Fixed const &f);
+        Fixed operator++(int);
+	    Fixed operator++();
+	    Fixed operator--(int);
+	    Fixed operator--();
+        static Fixed const &min(Fixed const &a, Fixed const &b);
+	    static Fixed const &max(Fixed const &a, Fixed const &b);
+	    static Fixed &min(Fixed &a, Fixed &b);
+	    static Fixed &max(Fixed &a, Fixed &b);
         ~Fixed();
         int getRawBits(void) const;
         void    setRawBit(int const raw);

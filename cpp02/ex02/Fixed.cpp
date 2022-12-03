@@ -94,6 +94,32 @@ Fixed Fixed::operator/(Fixed const &f) {
     return temp;
 }
 
+Fixed Fixed::operator++()
+{
+	this->fixed_number++;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp(*this);
+	operator++();
+	return (temp);
+}
+
+Fixed Fixed::operator--()
+{
+	this->fixed_number--;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp(*this);
+	operator--();
+	return (temp);
+}
+
 int Fixed::toInt(void) const {
     return (this->fixed_number >> Fixed::fract_bits);
 }
