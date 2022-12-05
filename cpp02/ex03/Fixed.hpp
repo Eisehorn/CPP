@@ -31,7 +31,7 @@ class Fixed {
 	    static Fixed &max(Fixed &a, Fixed &b);
         ~Fixed();
         int getRawBits(void) const;
-        void    setRawBit(int const raw);
+        void setRawBit(int const raw);
         int toInt(void) const;
         float toFloat(void) const;
 };
