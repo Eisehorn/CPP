@@ -37,3 +37,7 @@ class Fixed {
 };
 
 std::ostream &operator<<(std::ostream &out, Fixed const &f);
+Fixed const &min(Fixed const &a, Fixed const &b);
+Fixed const &max(Fixed const &a, Fixed const &b);
+Fixed &min(Fixed &a, Fixed &b);
+Fixed &max(Fixed &a, Fixed &b);
