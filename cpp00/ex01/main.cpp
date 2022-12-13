@@ -6,7 +6,7 @@
 /*   By: fgiulian <fgiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:20:19 by fgiulian          #+#    #+#             */
-/*   Updated: 2022/11/17 12:50:03 by fgiulian         ###   ########.fr       */
+/*   Updated: 2022/12/13 18:44:09 by fgiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int main() {
 	while (j == 0) {
 		std::cout<<"Enter ADD, SEARCH or EXIT"<<std::endl;
 		std::getline(std::cin, temp);
+		if (std::cin.eof())
+			return 0;
 		if (temp == "ADD") {
 			phonebook.phonebook_add(i);
 			i++;
@@ -33,6 +35,8 @@ int main() {
 			phonebook.phonebook_display();
 			std::cout<<"Enter contact index"<<std::endl;
 			std::getline(std::cin, temp);
+			if (std::cin.eof())
+				return 0;
 			if (temp.length() == 1 && 8 > temp[0] - 48 && temp[0] - 48 >= 0) {
 				k = temp[0] - 48;
 				phonebook.phonebook_search(k);

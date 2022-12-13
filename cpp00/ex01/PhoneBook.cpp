@@ -6,7 +6,7 @@
 /*   By: fgiulian <fgiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:55:18 by fgiulian          #+#    #+#             */
-/*   Updated: 2022/11/15 16:33:57 by fgiulian         ###   ########.fr       */
+/*   Updated: 2022/12/13 18:45:31 by fgiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,28 @@ void PhoneBook::phonebook_add(int i) {
     std::string temp;
     std::cout<<"Enter first name:"<<std::endl;
     std::getline(std::cin, temp);
+    if (std::cin.eof())
+		return ;
     this->_contact[i].set_first_name(temp);
     std::cout<<"Enter last name:"<<std::endl;
     std::getline(std::cin, temp);
+    if (std::cin.eof())
+		return ;
     this->_contact[i].set_last_name(temp);
     std::cout<<"Enter nickname:"<<std::endl;
     std::getline(std::cin, temp);
+    if (std::cin.eof())
+		return ;
     this->_contact[i].set_nickname(temp);
     std::cout<<"Enter phone number:"<<std::endl;
     std::getline(std::cin, temp);
+    if (std::cin.eof())
+		return ;
     this->_contact[i].set_phone_number(temp);
     std::cout<<"Enter darkest secret:"<<std::endl;
     std::getline(std::cin, temp);
+    if (std::cin.eof())
+		return ;
     this->_contact[i].set_darkest_secret(temp);
 }
 
