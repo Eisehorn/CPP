@@ -1,5 +1,12 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(){
+	this->_Hit_points = 10;
+	this->_Energy_points = 10;
+	this->_Attack_damage = 0;
+	std::cout<<"Ice to meet you."<<std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name) {
 	this->_name = name;
 	this->_Hit_points = 10;

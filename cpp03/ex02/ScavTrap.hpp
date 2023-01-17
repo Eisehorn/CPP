@@ -1,4 +1,7 @@
-#include "ClapTrap.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include "ClapTrap.hpp"
+#endif
 
 class ScavTrap : public ClapTrap{
     public:

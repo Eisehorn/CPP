@@ -1,16 +1,5 @@
 #include "Harl.hpp"
 
-// int main(int argc, char **argv) {
-// 	if (argc != 2) {
-//         std::cout<<"No complain from Harl!"<<std::endl;
-//         return 0;
-//     }
-//     Harl harl;
-// 	harl.complain(argv[1]);
-// 	return 0;
-// }
-
-
 int	harl_translate(char *argv)
 {
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};

@@ -1,10 +1,10 @@
 #include "Fixed.hpp"
 
 class Point {
-    public:
+    private:
         Fixed const x;
         Fixed const y;
-    private:
+    public:
         Point();
         Point(float const a, float const b);
         Point(Point const &p);
