@@ -9,5 +9,5 @@ class Point {
         Point(float const a, float const b);
         Point(Point const &p);
         Point& operator=(Fixed const &p);
-        ~Point();    
+        ~Point();
 };
