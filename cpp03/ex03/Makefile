@@ -1,5 +1,5 @@
-NAME = Repetitive_work!
-SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+NAME = Now_it_s_weird!
+SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)

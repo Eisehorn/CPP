@@ -20,11 +20,10 @@ void    FragTrap::highFivesGuys(){
 }
 
 FragTrap::~FragTrap(){
-    FragTrap::~ClapTrap();
     std::cout<<"No fair! I wasn't ready."<<std::endl;
 }
 
 void	FragTrap::attack(const std::string& target){
 	ClapTrap::attack(target);
-	std::cout<<"Does this thing have whindshield wipers?"   <<std::endl;
+	std::cout<<"Does this thing have whindshield wipers?"<<std::endl;
 }

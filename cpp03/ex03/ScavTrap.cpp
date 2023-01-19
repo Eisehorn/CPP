@@ -20,7 +20,6 @@ void    ScavTrap::guardGate(){
 }
 
 ScavTrap::~ScavTrap(){
-    ScavTrap::~ClapTrap();
     std::cout<<"Argh arghargh death gurgle gurglegurgle urgh... death."<<std::endl;
 }
 

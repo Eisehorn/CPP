@@ -20,7 +20,6 @@ void    FragTrap::highFivesGuys(){
 }
 
 FragTrap::~FragTrap(){
-    FragTrap::~ClapTrap();
     std::cout<<"No fair! I wasn't ready."<<std::endl;
 }
 
