@@ -1,11 +1,12 @@
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 # include "Animal.hpp"
+# include "Brain.hpp"
 #endif
 
-class Dog : public Animal {
+class Cat : public Animal {
     public:
-        Dog();
-        ~Dog();
+        Cat();
+        ~Cat();
         void    makeSound() const ;
 };
