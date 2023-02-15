@@ -1,7 +1,8 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 # include <iostream>
-# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
     private:
@@ -18,17 +19,14 @@ class Bureaucrat {
 		void				signForm(Form &f);
 		class	GradeTooHighException : public std::exception {
 			public:
-				virtual const char *what() const throw() {
-					return ("This grade is too High");
-				}
+				virtual const char *what() const throw();
 		};
 		class	GradeTooLowException : public std::exception {
 			public:
-				virtual const char *what() const throw() {
-					return ("This grade is too Low");
-				}
+				virtual const char *what() const throw();
 		};
 };
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &b);
+# include "Form.hpp"
 
 #endif

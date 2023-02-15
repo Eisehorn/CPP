@@ -7,7 +7,7 @@ Form::Form() : _name("RandomForm"), _grade_to_sign(-4), _grade_to_execute(-4){
 Form::Form(std::string name, int gradetosign, int gradetoexecute) : _name(name), _grade_to_sign(gradetosign), _grade_to_execute(gradetoexecute) {
     if(gradetosign > 150 || gradetoexecute > 150)
         throw Form::GradeTooLowException();
-    else if (gradetosign < 1 || gradetoexecute)
+    else if (gradetosign < 1 || gradetoexecute < 1)
         throw Form::GradeTooHighException();
     this->_signed = false;
 }
@@ -25,7 +25,7 @@ int Form::getGradetoExecute() const {
 }
 
 bool Form::getifSigned() const {
-    this->_signed;
+    return this->_signed;
 }
 
 void Form::beSigned(const Bureaucrat b) {
