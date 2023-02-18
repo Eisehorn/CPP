@@ -1,5 +1,5 @@
-NAME = "Mommy, when I grow up, I want to be a bureaucrat!"
-SRCS = main.cpp Bureaucrat.cpp
+NAME = "Conversion of scalar types"
+SRCS = main.cpp casting.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
