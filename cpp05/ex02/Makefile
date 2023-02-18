@@ -1,4 +1,4 @@
-NAME = "Mommy, when I grow up, I want to be a bureaucrat!"
+NAME = "No, you need form 28B, not 28C..."
 SRCS = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98

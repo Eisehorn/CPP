@@ -35,7 +35,7 @@ void    Bureaucrat::incrementGrade() {
 void    Bureaucrat::signForm(Form &f) {
     try {
         f.beSigned(*this);
-        std::cout<<this->_name<<" signed "<<f.getName();
+        std::cout<<this->_name<<" signed "<<f.getName()<<std::endl;
     }
     catch (std::exception &ex) {            //Form::GradeTooLow e
         std::cout<<this->_name<<" couldn't sign "<<f.getName()<<" because "<<ex.what()<<std::endl;
@@ -48,6 +48,10 @@ const char *Bureaucrat::GradeTooHighException::what() const throw() {
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
 					return ("This grade is too Low");
+}
+
+void        Bureaucrat::executeForm(Form const &form) const {
+    std::cout<<this->_name<<" executed "<<form.getName()<<std::endl;
 }
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &b) {

@@ -35,7 +35,7 @@ void    Bureaucrat::incrementGrade() {
 void    Bureaucrat::signForm(Form &f) {
     try {
         f.beSigned(*this);
-        std::cout<<this->_name<<" signed "<<f.getName();
+        std::cout<<this->_name<<" signed "<<f.getName()<<std::endl;
     }
     catch (std::exception &ex) {            //Form::GradeTooLow e
         std::cout<<this->_name<<" couldn't sign "<<f.getName()<<" because "<<ex.what()<<std::endl;
