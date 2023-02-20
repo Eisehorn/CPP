@@ -1,5 +1,5 @@
-NAME = "Conversion of scalar types"
-SRCS = main.cpp
+NAME = "Serialization"
+SRCS = main.cpp Data.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
